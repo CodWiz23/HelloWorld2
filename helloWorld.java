@@ -9,11 +9,18 @@ public class helloWorld{
     System.out.println("Hi Charlie");
     System.out.println("Hi Denise");
     System.out.println("Hi Ester");
-  //display the current date
+  //displays the current date
     displayCurrDate();
+    //displays the current amount of free memory
+    displayMemory();
   }
   public static void displayCurrDate(){
     Date currentDate = new Date();
     System.out.println("The current date is: " + currentDate);
   }
+ public static void displayMemory(){
+		Runtime run =  Runtime.getRuntime();
+		long freeMemory = run.freeMemory();
+		System.out.println("Current amount of free memory is: " + freeMemory / (1024 * 1024) + "MB");
+	}
 }
